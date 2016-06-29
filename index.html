@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>conditions</div>
+	<table id='conditionsApp'>
+		<th>
+			<tr>
+				<td>identifier</td>
+				<td>name</td>
+				<td/>
+			</tr>
+		</th>
+		<tbody>
+			<tr v-for='condition in conditions'>
+				<td>{{condition.identifier}}</td>
+				<td>{{condition.name}}</td>
+				<td><Button v-on:click='hardDeleteCondition'>Hard Delete</Button></td>
+				<td/>
+			</tr>
+			<tr>
+				<td><input type="text" v-model='identifier' placeholder="identifier"></td>
+				<td><input type="text" v-model='name' placeholder="name"></td>
+				<td><button v-on:click='addCondition'>Add</button></td>
+			</tr>
+		</tbody>
+
+	</table>
+<script src="bundle.js"></script>
+</body>
+</html>
